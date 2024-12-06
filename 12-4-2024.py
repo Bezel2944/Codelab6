@@ -33,7 +33,7 @@ def main():
         course.get_details()
         courses.append(course)
 
-    with open('grades_info.dat', 'ab') as file:
+    with open('grades_info.dat', 'wb') as file:
         for course in courses:
             pickle.dump(course, file)
     print("\nAll courses have been saved to 'grades_info.dat'.")
